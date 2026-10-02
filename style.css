@@ -145,21 +145,35 @@ button, a { font: inherit; }
   transition: opacity .55s ease, transform .7s ease;
 }
 
-/* One continuous logo spans the entire page.
-   The centre cards cover the middle, leaving the TRUE left and right
-   portions of this same logo visible at the sides. */
+/* 
+   The original square logo is 100vw wide.
+   Each side panel shows the corresponding half of that SAME logo.
+   LEFT  -> actual left half of logo
+   RIGHT -> actual right half of logo
+*/
 .side-logo {
   position: fixed;
-  inset: 0;
-  width: 100vw;
+  top: 0;
+  bottom: 0;
+  width: 50vw;
   height: 100vh;
   background-image: url("assets/infoverse.svg");
   background-repeat: no-repeat;
-  background-size: 100vw 100vw;
-  background-position: center center;
+  background-size: 100vw auto;
+  background-position-y: center;
   pointer-events: none;
   z-index: 0;
   opacity: 0.9;
+}
+
+.side-logo-left {
+  left: 0;
+  background-position-x: left;
+}
+
+.side-logo-right {
+  right: 0;
+  background-position-x: right;
 }
 
 /* Keep the central content above the logo. */
