@@ -139,13 +139,40 @@ button, a { font: inherit; }
 }
 
 .main-page.visible {
+ {
   opacity: 1;
   transform: scale(1);
   pointer-events: auto;
   transition: opacity .55s ease, transform .7s ease;
 }
 
+.side-logo {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 50vw;
+  background-image: url("assets/infoverse.svg");
+  background-repeat: no-repeat;
+  background-size: auto 115vh;
+  background-position: center;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.side-logo-left {
+  left: 0;
+  clip-path: inset(0 50% 0 0);
+}
+
+.side-logo-right {
+  right: 0;
+  clip-path: inset(0 0 0 50%);
+}
+
 .site-header {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -164,10 +191,13 @@ button, a { font: inherit; }
 }
 
 .module-grid {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 1210px);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
-  max-width: 1250px;
+  max-width: 1210px;
   margin: auto;
 }
 
