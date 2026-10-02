@@ -145,32 +145,23 @@ button, a { font: inherit; }
   transition: opacity .55s ease, transform .7s ease;
 }
 
-/* Split the single logo into TRUE left/right halves.
-   Each half stays on its original side; the centre cards cover the middle.
-   The artwork is scaled by height, so the SVG remains sharp and undistorted. */
-.main-page::before,
-.main-page::after {
+/* 
+   One continuous vector logo sits behind the main page.
+   The cards cover the centre, so the TRUE left half remains on the
+   left side and the TRUE right half remains on the right side.
+   Using one image prevents the two halves from becoming inverted.
+*/
+.main-page::before {
   content: "";
   position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
+  inset: 0;
   background-image: url("assets/infoverse.svg");
   background-repeat: no-repeat;
-  background-size: auto 160vh;
+  background-position: center center;
+  background-size: 100vw 100vh;
   pointer-events: none;
   z-index: 0;
   opacity: 0.9;
-}
-
-.main-page::before {
-  left: 0;
-  background-position: left center;
-}
-
-.main-page::after {
-  right: 0;
-  background-position: right center;
 }
 
 /* Keep the central content above the logo. */

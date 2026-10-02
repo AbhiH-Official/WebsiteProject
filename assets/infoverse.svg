@@ -5,6 +5,11 @@
     <stop offset="48%" stop-color="#19c8cf"/>
     <stop offset="100%" stop-color="#7548ff"/>
   </linearGradient>
+  <linearGradient id="t" x1="0%" y1="50%" x2="100%" y2="50%">
+    <stop offset="0%" stop-color="#16e58b"/>
+    <stop offset="50%" stop-color="#20c9d0"/>
+    <stop offset="100%" stop-color="#7a4dff"/>
+  </linearGradient>
 </defs>
 <g fill="none" stroke="url(#g)" stroke-width="34" stroke-linecap="round" stroke-linejoin="round">
   <path d="M500 145 L300 350 L180 575"/>
@@ -20,4 +25,5 @@
   <circle cx="500" cy="575" r="75"/>
   <circle cx="820" cy="575" r="75"/>
 </g>
+<text x="500" y="755" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="112" font-weight="500" letter-spacing="-5" fill="url(#t)">INFOVERSE</text>
 </svg>
