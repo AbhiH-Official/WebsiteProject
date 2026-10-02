@@ -1,6 +1,21 @@
 const intro = document.getElementById("intro");
 const enterButton = document.getElementById("enterButton");
 const mainPage = document.getElementById("mainPage");
+const moduleGrid = document.getElementById("home");
+const moduleViews = [...document.querySelectorAll(".module-view")];
+
+function showCurrentModule() {
+  const requestedModule = window.location.hash.slice(1);
+  const selectedView = moduleViews.find((view) => view.id === requestedModule);
+
+  moduleGrid.hidden = Boolean(selectedView);
+  moduleViews.forEach((view) => {
+    view.hidden = view !== selectedView;
+  });
+}
+
+window.addEventListener("hashchange", showCurrentModule);
+showCurrentModule();
 
 let hasEntered = false;
 
