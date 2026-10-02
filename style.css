@@ -128,6 +128,7 @@ button, a { font: inherit; }
 }
 
 .main-page {
+  --page-gutter: clamp(24px, 6vw, 96px);
   position: fixed;
   inset: 0;
   overflow-y: auto;
@@ -135,7 +136,7 @@ button, a { font: inherit; }
   opacity: 0;
   transform: scale(1.03);
   pointer-events: none;
-  padding: 40px clamp(24px, 6vw, 96px);
+  padding: 40px var(--page-gutter);
 }
 
 .main-page.visible {
@@ -150,7 +151,6 @@ button, a { font: inherit; }
 .main-logo-half {
   position: absolute;
   top: 50%;
-  left: 50%;
   width: min(100vw, 100vh);
   height: min(100vw, 100vh);
   background-image: url("assets/infoverse.svg");
@@ -160,11 +160,19 @@ button, a { font: inherit; }
   pointer-events: none;
   z-index: 0;
   opacity: 0.9;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
 }
 
-.main-logo-left { clip-path: inset(0 50% 0 0); }
-.main-logo-right { clip-path: inset(0 0 0 50%); }
+/* Place the split seam at the outer edges of the centered card grid. */
+.main-logo-left {
+  left: calc(50% - min(calc(50% - var(--page-gutter)), 605px) - min(50vw, 50vh));
+  clip-path: inset(0 50% 0 0);
+}
+
+.main-logo-right {
+  left: calc(50% + min(calc(50% - var(--page-gutter)), 605px) - min(50vw, 50vh));
+  clip-path: inset(0 0 0 50%);
+}
 
 /* Keep the central content above the logo. */
 
