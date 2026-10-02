@@ -145,28 +145,31 @@ button, a { font: inherit; }
   transition: opacity .55s ease, transform .7s ease;
 }
 
+/* Main-page logo background: each side shows its corresponding half of one continuous logo. */
 .side-logo {
   position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
+  top: 0;
+  bottom: 0;
+  width: 50vw;
   background-image: url("assets/infoverse.svg");
   background-repeat: no-repeat;
-  /* Keep the square logo proportional while making it span the full viewport width. */
-  background-size: 100vw auto;
-  background-position: center center;
+  background-size: auto 100vh;
   pointer-events: none;
   z-index: 0;
   opacity: 0.9;
 }
 
 .side-logo-left {
-  clip-path: inset(0 50% 0 0);
+  left: 0;
+  background-position: right center;
 }
 
 .side-logo-right {
-  clip-path: inset(0 0 0 50%);
+  right: 0;
+  background-position: left center;
 }
+
+/* Keep the central content above the logo. */
 
 .site-header {
   position: relative;
