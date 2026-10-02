@@ -220,7 +220,7 @@ button, a { font: inherit; }
   background:
     linear-gradient(145deg, rgba(55,255,173,.07), transparent 42%),
     radial-gradient(ellipse at 85% 18%, rgba(39,207,255,.12), transparent 36%),
-    rgba(5,16,20,.97);
+    #051014;
   color: var(--text);
   text-decoration: none;
   box-shadow: inset 0 1px rgba(255,255,255,.035), 0 18px 55px rgba(0,0,0,.3);
@@ -268,10 +268,10 @@ button, a { font: inherit; }
 .learning-view > h2 { max-width: 1000px; }
 .roadmap-title-slash { color: #37ffad; }
 .roadmap-overview { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 30px 0 20px; }
-.roadmap-overview > div { padding: 16px 18px; border: 1px solid rgba(39,207,255,.18); border-radius: 8px; background: linear-gradient(120deg, rgba(39,207,255,.055), rgba(55,255,173,.035)); }
+.roadmap-overview > div { padding: 16px 18px; border: 1px solid rgba(39,207,255,.18); border-radius: 8px; background: linear-gradient(120deg, #07161a, #071311); }
 .roadmap-overview span, .roadmap-progress-copy span { display: block; margin-bottom: 8px; color: #72918a; font-size: 9px; letter-spacing: .16em; }
 .roadmap-overview strong { color: #d9eee8; font-size: 14px; }
-.roadmap-progress { margin: 20px 0 34px; padding: 18px 20px; border: 1px solid rgba(55,255,173,.2); border-radius: 9px; background: rgba(4,14,17,.83); }
+.roadmap-progress { margin: 20px 0 34px; padding: 18px 20px; border: 1px solid rgba(55,255,173,.2); border-radius: 9px; background: #041014; }
 .roadmap-progress-copy { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .roadmap-progress-copy span { margin: 0; color: #37ffad; }
 .roadmap-progress-copy strong { color: #d9eee8; font-size: 12px; font-weight: 500; }
@@ -281,7 +281,7 @@ button, a { font: inherit; }
 .roadmap-track { position: relative; display: grid; gap: 14px; margin: 0 0 64px; padding: 0 0 0 42px; list-style: none; }
 .roadmap-track::before { position: absolute; top: 20px; bottom: 20px; left: 13px; width: 1px; background: linear-gradient(180deg, #37ffad, rgba(39,207,255,.4) 75%, rgba(39,207,255,.08)); box-shadow: 0 0 12px rgba(55,255,173,.23); content: ""; }
 .roadmap-step { position: relative; min-width: 0; }
-.roadmap-stop { overflow: visible; border: 1px solid rgba(39,207,255,.17); border-radius: 10px; background: linear-gradient(115deg, rgba(5,18,21,.98), rgba(5,12,18,.96)); transition: border-color .2s ease, box-shadow .2s ease; }
+.roadmap-stop { overflow: visible; border: 1px solid rgba(39,207,255,.17); border-radius: 10px; background: linear-gradient(115deg, #051215, #050c11); transition: border-color .2s ease, box-shadow .2s ease; }
 .roadmap-stop[open] { border-color: rgba(55,255,173,.4); box-shadow: 0 8px 30px rgba(0,0,0,.18), inset 3px 0 rgba(55,255,173,.18); }
 .roadmap-stop > summary { position: relative; display: flex; align-items: center; gap: 16px; min-height: 96px; padding: 18px 22px 18px 54px; cursor: pointer; list-style: none; }
 .roadmap-stop > summary::-webkit-details-marker { display: none; }
@@ -303,7 +303,7 @@ button, a { font: inherit; }
 .roadmap-complete { grid-column: 1 / -1; display: flex; width: fit-content; align-items: center; gap: 9px; color: #91aaa4; font-size: 11px; cursor: pointer; }
 .roadmap-complete input { width: 16px; height: 16px; accent-color: #37ffad; }
 .roadmap-complete:has(input:checked) { color: #37ffad; }
-.roadmap-branches { padding: 28px; border: 1px solid rgba(39,207,255,.2); border-radius: 12px; background: radial-gradient(ellipse at 50% 0, rgba(39,207,255,.08), transparent 60%), rgba(4,13,17,.92); }
+.roadmap-branches { padding: 28px; border: 1px solid rgba(39,207,255,.2); border-radius: 12px; background: radial-gradient(ellipse at 50% 0, rgba(39,207,255,.08), transparent 60%), #040d11; }
 .roadmap-branches > .roadmap-kicker { margin: 0 0 8px; }
 .roadmap-branches > h3 { margin: 0 0 20px; font-size: clamp(24px, 4vw, 34px); }
 .roadmap-branch-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
@@ -318,7 +318,11 @@ button, a { font: inherit; }
   z-index: 2;
   width: min(100%, 1210px);
   margin: 0 auto;
-  padding: 8px 0 48px;
+  padding: 18px clamp(18px, 2.4vw, 34px) 48px;
+  border: 1px solid rgba(55,255,173,.12);
+  border-radius: 16px;
+  background: rgba(0,0,0,.95);
+  box-shadow: 0 20px 70px rgba(0,0,0,.55);
 }
 
 .module-back {
@@ -354,7 +358,7 @@ button, a { font: inherit; }
   --game-green: #37ffad;
   --game-blue: #27cfff;
   --game-line: rgba(55,255,173,.2);
-  --game-surface: rgba(5,16,20,.96);
+  --game-surface: #051014;
   color: #e8fff7;
 }
 
@@ -481,14 +485,21 @@ button, a { font: inherit; }
 .submodule-card {
   min-height: 220px;
   padding: 24px;
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 20px;
-  background: rgba(21,21,21,.96);
+  border: 1px solid rgba(55,255,173,.24);
+  border-radius: 18px;
+  background:
+    linear-gradient(145deg, rgba(55,255,173,.06), transparent 48%),
+    radial-gradient(ellipse at 85% 15%, rgba(39,207,255,.11), transparent 38%),
+    #051014;
+  box-shadow: inset 0 1px rgba(255,255,255,.035), 0 16px 45px rgba(0,0,0,.28);
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
 }
+
+.submodule-card:hover { transform: translateY(-3px); border-color: rgba(55,255,173,.5); box-shadow: 0 18px 48px rgba(20,255,170,.08); }
 
 .submodule-card > span,
 .submodule-card small {
-  color: var(--accent);
+  color: #37ffad;
   font-size: 12px;
   letter-spacing: .14em;
 }
@@ -496,15 +507,16 @@ button, a { font: inherit; }
 .submodule-card h3 {
   margin: 28px 0 10px;
   font-size: clamp(20px, 2.4vw, 28px);
+  color: #e8fff7;
 }
 
 .submodule-card p {
   min-height: 48px;
-  color: var(--muted);
+  color: #91aaa4;
   line-height: 1.5;
 }
 
-.submodule-card small { display: inline-block; margin-top: 10px; }
+.submodule-card small { display: inline-block; margin-top: 10px; padding: 6px 8px; border: 1px solid rgba(39,207,255,.2); border-radius: 4px; color: #27cfff; }
 
 [hidden] { display: none !important; }
 
