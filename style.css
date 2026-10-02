@@ -139,7 +139,6 @@ button, a { font: inherit; }
 }
 
 .main-page.visible {
- {
   opacity: 1;
   transform: scale(1);
   pointer-events: auto;
@@ -153,8 +152,9 @@ button, a { font: inherit; }
   height: 100vh;
   background-image: url("assets/infoverse.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  /* Keep the square logo proportional while making it span the full viewport width. */
+  background-size: 100vw auto;
+  background-position: center center;
   pointer-events: none;
   z-index: 0;
   opacity: 0.9;
