@@ -85,7 +85,7 @@ button, a { font: inherit; }
   position: absolute;
   inset: 0;
   z-index: 3;
-  background-image: url("assets/infoverse.PNG");
+  background-image: url("assets/infoverse.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -153,8 +153,8 @@ button, a { font: inherit; }
 }
 
 .header-logo {
-  width: 58px;
-  height: 58px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
 }
 
