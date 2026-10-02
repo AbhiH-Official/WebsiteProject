@@ -1,17 +1,14 @@
 :root {
-  --logo-bg: #17121f;
+  --logo-bg: #000000;
   --accent: #9b6cff;
   --text: #f5f1fa;
   --muted: #aaa0b5;
-  --card: #211a2b;
+  --card: #151515;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html,
-body {
+html, body {
   margin: 0;
   width: 100%;
   min-height: 100%;
@@ -20,14 +17,9 @@ body {
   color: var(--text);
 }
 
-body {
-  overflow: hidden;
-}
+body { overflow: hidden; }
 
-button,
-a {
-  font: inherit;
-}
+button, a { font: inherit; }
 
 .intro {
   position: fixed;
@@ -35,28 +27,25 @@ a {
   z-index: 10;
   display: grid;
   place-items: center;
-  background: var(--logo-bg);
+  background: #000;
   overflow: hidden;
 }
 
+/* The supplied logo is square. The largest undistorted square that can fit
+   inside the viewport is used, leaving black space on the remaining sides. */
 .logo-stage {
   position: relative;
-  width: min(100vw, calc(100vh * 1.7777778));
-  height: min(100vh, calc(100vw / 1.7777778));
-  max-width: 100vw;
-  max-height: 100vh;
+  width: min(100vw, 100vh);
+  height: min(100vw, 100vh);
   display: grid;
   place-items: center;
-  overflow: hidden;
+  overflow: visible;
+  background: #000;
 }
 
-/*
-  The image uses contain, so its original aspect ratio is never distorted.
-  The stage has the same background colour as the logo area, meaning any
-  unused screen space blends into the surrounding background.
-*/
 .intro-logo {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -65,12 +54,15 @@ a {
 }
 
 .enter-button {
-  position: relative;
+  position: absolute;
   z-index: 4;
+  left: 50%;
+  bottom: 12%;
+  transform: translateX(-50%);
   border: 1px solid rgba(255,255,255,.55);
   border-radius: 999px;
   padding: 12px 30px;
-  background: rgba(23,18,31,.72);
+  background: rgba(0,0,0,.72);
   color: white;
   cursor: pointer;
   letter-spacing: .18em;
@@ -78,7 +70,7 @@ a {
 }
 
 .enter-button:hover {
-  transform: scale(1.05);
+  transform: translateX(-50%) scale(1.05);
   background: rgba(155,108,255,.25);
 }
 
@@ -87,17 +79,13 @@ a {
   outline-offset: 5px;
 }
 
-/*
-  These two layers are clipped halves of the SAME logo.
-  LEFT moves toward the LEFT edge.
-  RIGHT moves toward the RIGHT edge.
-  They never cross each other.
-*/
+/* Both halves use the exact supplied logo and are clipped at the centre.
+   The left half travels left; the right half travels right. */
 .logo-half {
   position: absolute;
   inset: 0;
   z-index: 3;
-  background-image: url("assets/logo.png");
+  background-image: url("assets/infoverse.PNG");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -105,22 +93,15 @@ a {
   opacity: 0;
 }
 
-.logo-left {
-  clip-path: inset(0 50% 0 0);
-}
-
-.logo-right {
-  clip-path: inset(0 0 0 50%);
-}
+.logo-left { clip-path: inset(0 50% 0 0); }
+.logo-right { clip-path: inset(0 0 0 50%); }
 
 .intro.leaving .intro-logo {
   opacity: 0;
   transition: opacity .15s ease;
 }
 
-.intro.leaving .logo-half {
-  opacity: 1;
-}
+.intro.leaving .logo-half { opacity: 1; }
 
 .intro.leaving .logo-left {
   animation: split-left .85s cubic-bezier(.65,0,.2,1) forwards;
@@ -132,25 +113,25 @@ a {
 
 .intro.leaving .enter-button {
   opacity: 0;
-  transform: scale(.85);
+  transform: translateX(-50%) scale(.85);
   transition: opacity .2s ease, transform .2s ease;
 }
 
 @keyframes split-left {
   from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+  to { transform: translateX(-100vw); }
 }
 
 @keyframes split-right {
   from { transform: translateX(0); }
-  to { transform: translateX(100%); }
+  to { transform: translateX(100vw); }
 }
 
 .main-page {
   position: fixed;
   inset: 0;
   overflow-y: auto;
-  background: var(--logo-bg);
+  background: #000;
   opacity: 0;
   transform: scale(1.03);
   pointer-events: none;
@@ -224,19 +205,8 @@ a {
 }
 
 @media (max-width: 800px) {
-  body {
-    overflow: auto;
-  }
-
-  .module-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .module-card {
-    min-height: 220px;
-  }
-
-  .module-card h2 {
-    margin-top: 35px;
-  }
+  body { overflow: auto; }
+  .module-grid { grid-template-columns: 1fr; }
+  .module-card { min-height: 220px; }
+  .module-card h2 { margin-top: 35px; }
 }
