@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infoverse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <section id="intro" class="intro" aria-label="Welcome">
+      <div id="logoStage" class="logo-stage">
+        <img id="introLogo" class="intro-logo" src="assets/logo.png" alt="Infoverse logo">
+
+        <div id="logoLeft" class="logo-half logo-left" aria-hidden="true"></div>
+        <div id="logoRight" class="logo-half logo-right" aria-hidden="true"></div>
+
+        <button id="enterButton" class="enter-button" type="button">
+          ENTER
+        </button>
+      </div>
+    </section>
+
+    <section id="mainPage" class="main-page" aria-hidden="true">
+      <header class="site-header">
+        <img class="header-logo" src="assets/logo.png" alt="Infoverse">
+        <h1>Infoverse</h1>
+      </header>
+
+      <div class="module-grid">
+        <a class="module-card" href="#">
+          <span>01</span>
+          <h2>Learn</h2>
+          <p>Build your analytics knowledge from beginner to advanced.</p>
+        </a>
+
+        <a class="module-card" href="#">
+          <span>02</span>
+          <h2>Games</h2>
+          <p>Practice analytical thinking through interactive games.</p>
+        </a>
+
+        <a class="module-card" href="#">
+          <span>03</span>
+          <h2>Challenges</h2>
+          <p>Compete, solve problems and test your skills.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
