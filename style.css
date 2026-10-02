@@ -145,15 +145,24 @@ button, a { font: inherit; }
   transition: opacity .55s ease, transform .7s ease;
 }
 
-/* Main-page logo background: each side shows its corresponding half of one continuous logo. */
+/* 
+   Main-page logo background.
+   IMPORTANT: both side panels use the SAME 100vw-wide copy of the logo.
+   Each panel reveals only its own half:
+     left panel  = left 50% of the logo
+     right panel = right 50% of the logo
+   This keeps the two sides as true halves instead of two full logos.
+*/
 .side-logo {
   position: fixed;
   top: 0;
   bottom: 0;
   width: 50vw;
+  height: 100vh;
   background-image: url("assets/infoverse.svg");
   background-repeat: no-repeat;
-  background-size: auto 100vh;
+  background-size: 100vw auto;
+  background-position-y: center;
   pointer-events: none;
   z-index: 0;
   opacity: 0.9;
@@ -161,12 +170,12 @@ button, a { font: inherit; }
 
 .side-logo-left {
   left: 0;
-  background-position: right center;
+  background-position-x: left;
 }
 
 .side-logo-right {
   right: 0;
-  background-position: left center;
+  background-position-x: right;
 }
 
 /* Keep the central content above the logo. */
