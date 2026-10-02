@@ -145,37 +145,21 @@ button, a { font: inherit; }
   transition: opacity .55s ease, transform .7s ease;
 }
 
-/* 
-   Main-page logo background.
-   IMPORTANT: both side panels use the SAME 100vw-wide copy of the logo.
-   Each panel reveals only its own half:
-     left panel  = left 50% of the logo
-     right panel = right 50% of the logo
-   This keeps the two sides as true halves instead of two full logos.
-*/
+/* One continuous logo spans the entire page.
+   The centre cards cover the middle, leaving the TRUE left and right
+   portions of this same logo visible at the sides. */
 .side-logo {
   position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 50vw;
+  inset: 0;
+  width: 100vw;
   height: 100vh;
   background-image: url("assets/infoverse.svg");
   background-repeat: no-repeat;
-  background-size: 100vw auto;
-  background-position-y: center;
+  background-size: 100vw 100vw;
+  background-position: center center;
   pointer-events: none;
   z-index: 0;
   opacity: 0.9;
-}
-
-.side-logo-left {
-  left: 0;
-  background-position-x: left;
-}
-
-.side-logo-right {
-  right: 0;
-  background-position-x: right;
 }
 
 /* Keep the central content above the logo. */
