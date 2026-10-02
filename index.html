@@ -64,14 +64,30 @@
 
       <section id="games" class="module-view" aria-labelledby="games-title" hidden>
         <a class="module-back" href="#home">← Back to modules</a>
-        <p class="module-eyebrow">02 / GAMES</p>
-        <h2 id="games-title">Play and practice</h2>
-        <p class="module-intro">Short activities to sharpen your analytical thinking. Games are coming soon.</p>
-        <div class="submodule-grid">
-          <article class="submodule-card"><span>01</span><h3>Pattern Sprint</h3><p>Spot the pattern and make your next move.</p><small>COMING SOON</small></article>
-          <article class="submodule-card"><span>02</span><h3>Logic Lab</h3><p>Work through quick logic puzzles and brain teasers.</p><small>COMING SOON</small></article>
-          <article class="submodule-card"><span>03</span><h3>Data Detective</h3><p>Follow the clues hidden in a set of data.</p><small>COMING SOON</small></article>
+        <p class="module-eyebrow">02 / INFOVERSE ARCADE</p>
+        <h2 id="games-title">Train your instincts.</h2>
+        <p class="module-intro">Three quick-fire ways to sharpen the way you think. Choose your next run.</p>
+        <div id="gameCatalog" class="game-catalog">
+          <article class="game-card game-card-pattern">
+            <div class="game-card-top"><span class="game-index">01</span><span class="game-tag">45 SEC RUN</span></div>
+            <div class="game-symbol pattern-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <h3>Pattern Sprint</h3><p>Read the signal. Find what comes next. Beat the clock.</p>
+            <button class="game-launch" type="button" data-launch-game="pattern">START SPRINT <span>↗</span></button>
+          </article>
+          <article class="game-card game-card-logic">
+            <div class="game-card-top"><span class="game-index">02</span><span class="game-tag">5 PUZZLES</span></div>
+            <div class="game-symbol logic-symbol" aria-hidden="true"><span>?</span></div>
+            <h3>Logic Lab</h3><p>Crack five compact puzzles using pure reasoning.</p>
+            <button class="game-launch" type="button" data-launch-game="logic">ENTER THE LAB <span>↗</span></button>
+          </article>
+          <article class="game-card game-card-data">
+            <div class="game-card-top"><span class="game-index">03</span><span class="game-tag">5 CLUES</span></div>
+            <div class="game-symbol data-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+            <h3>Data Detective</h3><p>Interrogate a dataset and uncover the story inside.</p>
+            <button class="game-launch" type="button" data-launch-game="data">OPEN CASE <span>↗</span></button>
+          </article>
         </div>
+        <div id="gamePanel" class="game-panel" aria-live="polite" hidden></div>
       </section>
 
       <section id="challenges" class="module-view" aria-labelledby="challenges-title" hidden>
@@ -89,5 +105,6 @@
   </main>
 
   <script src="script.js"></script>
+  <script src="games.js"></script>
 </body>
 </html>
