@@ -148,12 +148,12 @@ button, a { font: inherit; }
 
 .side-logo {
   position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 50vw;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
   background-image: url("assets/infoverse.svg");
   background-repeat: no-repeat;
-  background-size: auto 115vh;
+  background-size: cover;
   background-position: center;
   pointer-events: none;
   z-index: 0;
@@ -161,12 +161,10 @@ button, a { font: inherit; }
 }
 
 .side-logo-left {
-  left: 0;
   clip-path: inset(0 50% 0 0);
 }
 
 .side-logo-right {
-  right: 0;
   clip-path: inset(0 0 0 50%);
 }
 
