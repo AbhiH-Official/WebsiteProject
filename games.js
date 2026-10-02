@@ -82,7 +82,6 @@ function openGame(key) {
   gameCatalog.hidden = true;
   gamePanel.hidden = false;
   renderReady();
-  gamePanel.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function renderReady() {
@@ -210,7 +209,6 @@ function closeGame() {
   run = null;
   gamePanel.hidden = true;
   gameCatalog.hidden = false;
-  gameCatalog.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 gameCatalog.addEventListener("click", (event) => {

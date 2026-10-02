@@ -31,35 +31,94 @@
       </header>
 
       <div id="home" class="module-grid">
-        <a class="module-card" href="#learn">
-          <span>01</span>
-          <h2>Learn</h2>
-          <p>Build your analytics knowledge from beginner to advanced.</p>
+        <a class="module-card module-card-learn" href="#learn">
+          <div class="module-card-top"><span class="module-card-index">01 / LEARN</span><span class="module-card-tag">8 STAGE ROADMAP</span></div>
+          <div class="module-card-art module-art-learn" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <h2>Business Analyst</h2>
+          <p>Follow a guided path from business problem to measurable outcome.</p>
+          <div class="module-card-foot">OPEN LEARNING PATH <b>↗</b></div>
         </a>
 
-        <a class="module-card" href="#games">
-          <span>02</span>
-          <h2>Games</h2>
-          <p>Practice analytical thinking through interactive games.</p>
+        <a class="module-card module-card-games" href="#games">
+          <div class="module-card-top"><span class="module-card-index">02 / GAMES</span><span class="module-card-tag">3 ARCADE RUNS</span></div>
+          <div class="module-card-art module-art-games" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <h2>Arcade</h2>
+          <p>Sharpen your instincts with patterns, puzzles, and data.</p>
+          <div class="module-card-foot">ENTER THE ARCADE <b>↗</b></div>
         </a>
 
-        <a class="module-card" href="#challenges">
-          <span>03</span>
-          <h2>Challenges</h2>
-          <p>Compete, solve problems and test your skills.</p>
+        <a class="module-card module-card-challenges" href="#challenges">
+          <div class="module-card-top"><span class="module-card-index">03 / CHALLENGES</span><span class="module-card-tag">CASE MISSIONS</span></div>
+          <div class="module-card-art module-art-challenges" aria-hidden="true"><i></i><i></i><i></i></div>
+          <h2>Field Missions</h2>
+          <p>Apply your skills to realistic business scenarios.</p>
+          <div class="module-card-foot">VIEW CHALLENGES <b>↗</b></div>
         </a>
       </div>
 
-      <section id="learn" class="module-view" aria-labelledby="learn-title" hidden>
+      <section id="learn" class="module-view learning-view" aria-labelledby="learn-title" hidden>
         <a class="module-back" href="#home">← Back to modules</a>
-        <p class="module-eyebrow">01 / LEARN</p>
-        <h2 id="learn-title">Build your knowledge</h2>
-        <p class="module-intro">Choose a learning path to get started. Lessons are coming soon.</p>
-        <div class="submodule-grid">
-          <article class="submodule-card"><span>01</span><h3>Analytics Foundations</h3><p>Start with data, questions and the basics of analysis.</p><small>COMING SOON</small></article>
-          <article class="submodule-card"><span>02</span><h3>Data Visualization</h3><p>Learn how to turn information into clear visual stories.</p><small>COMING SOON</small></article>
-          <article class="submodule-card"><span>03</span><h3>Advanced Analytics</h3><p>Explore deeper methods for finding patterns and insight.</p><small>COMING SOON</small></article>
+        <p class="module-eyebrow">01 / LEARNING ROADMAP</p>
+        <h2 id="learn-title">Business Analyst<span class="roadmap-title-slash"> / </span>Core Path</h2>
+        <p class="module-intro">Learn to move from an unclear business problem to a solution people can use—and prove it made a difference.</p>
+
+        <div class="roadmap-overview">
+          <div><span>STARTING POINT</span><strong>Beginner friendly</strong></div>
+          <div><span>CORE MISSIONS</span><strong>8 connected stages</strong></div>
+          <div><span>CAPSTONE</span><strong>Portfolio-ready case</strong></div>
         </div>
+
+        <section class="roadmap-progress" aria-label="Roadmap progress">
+          <div class="roadmap-progress-copy"><span>YOUR SIGNAL PROGRESS</span><strong id="roadmapProgressText">0 / 8 stages complete</strong></div>
+          <div id="roadmapProgress" class="roadmap-progress-track" role="progressbar" aria-label="Roadmap completion" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"><span id="roadmapProgressBar"></span></div>
+          <p>Progress is saved in this browser. Open any stage to view its topics and practice output.</p>
+        </section>
+
+        <ol class="roadmap-track" aria-label="Business analyst learning stages">
+          <li class="roadmap-step"><details class="roadmap-stop" open>
+            <summary><span class="roadmap-marker">01</span><span class="roadmap-summary"><span class="roadmap-kicker">FOUNDATION / FRAME THE CONTEXT</span><strong>Business context & analyst mindset</strong><span>Understand what the organization is trying to achieve before proposing a fix.</span></span><span class="roadmap-duration">STAGE 01</span></summary>
+            <div class="roadmap-detail"><div><h4>Topics to map</h4><div class="roadmap-topics"><span>Business models & value</span><span>Strategy and objectives</span><span>KPIs and outcomes</span><span>Problem vs. symptom</span><span>Ethics and assumptions</span></div></div><div class="roadmap-output"><span>FIELD OUTPUT</span><p>A one-page problem brief with the goal, affected users, current evidence, and success measure.</p></div><label class="roadmap-complete"><input type="checkbox" data-roadmap-complete="01"><span>Mark stage complete</span></label></div>
+          </details></li>
+          <li class="roadmap-step"><details class="roadmap-stop">
+            <summary><span class="roadmap-marker">02</span><span class="roadmap-summary"><span class="roadmap-kicker">DISCOVERY / FIND THE RIGHT PROBLEM</span><strong>Stakeholders & discovery</strong><span>Find the people, constraints, and evidence that shape the opportunity.</span></span><span class="roadmap-duration">STAGE 02</span></summary>
+            <div class="roadmap-detail"><div><h4>Topics to map</h4><div class="roadmap-topics"><span>Stakeholder mapping</span><span>Interviews & workshops</span><span>Observation & surveys</span><span>Empathy and user needs</span><span>Scope and context diagrams</span></div></div><div class="roadmap-output"><span>FIELD OUTPUT</span><p>A stakeholder map and discovery plan that separates known facts from open questions.</p></div><label class="roadmap-complete"><input type="checkbox" data-roadmap-complete="02"><span>Mark stage complete</span></label></div>
+          </details></li>
+          <li class="roadmap-step"><details class="roadmap-stop">
+            <summary><span class="roadmap-marker">03</span><span class="roadmap-summary"><span class="roadmap-kicker">DEFINITION / MAKE NEEDS TESTABLE</span><strong>Elicitation & requirements</strong><span>Turn what people need into clear, testable statements.</span></span><span class="roadmap-duration">STAGE 03</span></summary>
+            <div class="roadmap-detail"><div><h4>Topics to map</h4><div class="roadmap-topics"><span>Functional & non-functional needs</span><span>User stories and use cases</span><span>Acceptance criteria</span><span>Prioritization (MoSCoW)</span><span>Traceability and change control</span></div></div><div class="roadmap-output"><span>FIELD OUTPUT</span><p>A prioritized requirement set with acceptance criteria and links back to stakeholder needs.</p></div><label class="roadmap-complete"><input type="checkbox" data-roadmap-complete="03"><span>Mark stage complete</span></label></div>
+          </details></li>
+          <li class="roadmap-step"><details class="roadmap-stop">
+            <summary><span class="roadmap-marker">04</span><span class="roadmap-summary"><span class="roadmap-kicker">ANALYSIS / SEE HOW WORK REALLY FLOWS</span><strong>Process & root-cause analysis</strong><span>Model the current experience, find friction, and design a better future state.</span></span><span class="roadmap-duration">STAGE 04</span></summary>
+            <div class="roadmap-detail"><div><h4>Topics to map</h4><div class="roadmap-topics"><span>As-is / to-be workflows</span><span>Swimlanes & BPMN basics</span><span>Root-cause analysis</span><span>Waste, handoffs & bottlenecks</span><span>Risks and dependencies</span></div></div><div class="roadmap-output"><span>FIELD OUTPUT</span><p>A current-state and future-state process map with the root cause and expected improvement called out.</p></div><label class="roadmap-complete"><input type="checkbox" data-roadmap-complete="04"><span>Mark stage complete</span></label></div>
+          </details></li>
+          <li class="roadmap-step"><details class="roadmap-stop">
+            <summary><span class="roadmap-marker">05</span><span class="roadmap-summary"><span class="roadmap-kicker">EVIDENCE / LET THE DATA TEST THE STORY</span><strong>Data & decision analysis</strong><span>Use fit-for-purpose evidence to size the problem and compare outcomes.</span></span><span class="roadmap-duration">STAGE 05</span></summary>
+            <div class="roadmap-detail"><div><h4>Topics to map</h4><div class="roadmap-topics"><span>Measures and data quality</span><span>Excel / spreadsheet analysis</span><span>SQL fundamentals</span><span>Descriptive statistics</span><span>Charts and insight narratives</span></div></div><div class="roadmap-output"><span>FIELD OUTPUT</span><p>A small evidence pack: baseline, key finding, caveats, and a clear view of what the data cannot tell you.</p></div><label class="roadmap-complete"><input type="checkbox" data-roadmap-complete="05"><span>Mark stage complete</span></label></div>
+          </details></li>
+          <li class="roadmap-step"><details class="roadmap-stop">
+            <summary><span class="roadmap-marker">06</span><span class="roadmap-summary"><span class="roadmap-kicker">EVALUATION / RECOMMEND A VIABLE CHANGE</span><strong>Solution options & business case</strong><span>Compare feasible choices by value, cost, risk, and impact.</span></span><span class="roadmap-duration">STAGE 06</span></summary>
+            <div class="roadmap-detail"><div><h4>Topics to map</h4><div class="roadmap-topics"><span>Option analysis</span><span>Feasibility and constraints</span><span>Costs, benefits & assumptions</span><span>Risk and impact assessment</span><span>Recommendation framing</span></div></div><div class="roadmap-output"><span>FIELD OUTPUT</span><p>A concise business case comparing options and recommending one measurable, low-risk next step.</p></div><label class="roadmap-complete"><input type="checkbox" data-roadmap-complete="06"><span>Mark stage complete</span></label></div>
+          </details></li>
+          <li class="roadmap-step"><details class="roadmap-stop">
+            <summary><span class="roadmap-marker">07</span><span class="roadmap-summary"><span class="roadmap-kicker">DELIVERY / HELP THE CHANGE LAND</span><strong>Agile delivery & verification</strong><span>Work with delivery teams to build the right thing and confirm it works.</span></span><span class="roadmap-duration">STAGE 07</span></summary>
+            <div class="roadmap-detail"><div><h4>Topics to map</h4><div class="roadmap-topics"><span>Backlogs & refinement</span><span>Agile / iterative delivery</span><span>UAT plans and test scenarios</span><span>Defect triage</span><span>Change readiness & adoption</span></div></div><div class="roadmap-output"><span>FIELD OUTPUT</span><p>A delivery-ready slice with acceptance checks, UAT evidence, and a plan to support affected users.</p></div><label class="roadmap-complete"><input type="checkbox" data-roadmap-complete="07"><span>Mark stage complete</span></label></div>
+          </details></li>
+          <li class="roadmap-step"><details class="roadmap-stop">
+            <summary><span class="roadmap-marker">08</span><span class="roadmap-summary"><span class="roadmap-kicker">OUTCOMES / PROVE THE VALUE</span><strong>Benefits, communication & capstone</strong><span>Measure what changed, explain why it matters, and package the work.</span></span><span class="roadmap-duration">FINAL STAGE</span></summary>
+            <div class="roadmap-detail"><div><h4>Topics to map</h4><div class="roadmap-topics"><span>Benefits realization</span><span>Outcome measures & dashboards</span><span>Executive storytelling</span><span>Lessons learned</span><span>Portfolio case study</span></div></div><div class="roadmap-output"><span>CAPSTONE SIGNAL</span><p>Present a complete case from problem brief to measured recommendation, including artifacts and trade-offs.</p></div><label class="roadmap-complete"><input type="checkbox" data-roadmap-complete="08"><span>Mark stage complete</span></label></div>
+          </details></li>
+        </ol>
+
+        <section class="roadmap-branches" aria-labelledby="roadmap-branches-title">
+          <p class="roadmap-kicker">AFTER THE CORE PATH</p>
+          <h3 id="roadmap-branches-title">Choose your next signal.</h3>
+          <div class="roadmap-branch-grid">
+            <article><span>BRANCH A</span><h4>Product & Agile</h4><p>Product discovery, roadmaps, backlog strategy, and experimentation.</p></article>
+            <article><span>BRANCH B</span><h4>Operations & Process</h4><p>Service design, process excellence, automation, and change adoption.</p></article>
+            <article><span>BRANCH C</span><h4>BI & Decision Support</h4><p>Metrics, dashboard requirements, data storytelling, and decision systems.</p></article>
+          </div>
+          <p class="roadmap-tools-note">Tool examples: spreadsheets, SQL, diagramming tools, and work trackers. Learn the method first; the tool can change by team.</p>
+        </section>
       </section>
 
       <section id="games" class="module-view" aria-labelledby="games-title" hidden>
