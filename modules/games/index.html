@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030708">
+  <title>Infoverse Arcade</title>
+  <link rel="stylesheet" href="../module-shell.css">
+  <link rel="stylesheet" href="games.css">
+</head>
+<body>
+  <div class="module-shell">
+    <div class="module-logo-half module-logo-left" aria-hidden="true"></div>
+    <div class="module-logo-half module-logo-right" aria-hidden="true"></div>
+    <header class="module-topbar">
+      <a class="module-brand" href="../../index.html?home=1#home"><img src="../../assets/infoverse.svg" alt=""><span>Infoverse</span></a>
+      <a class="module-return" href="../../index.html?home=1#home">← ALL MODULES</a>
+    </header>
+
+    <main class="module-layout games-layout">
+      <p class="module-eyebrow">02 / INFOVERSE ARCADE</p>
+      <h1>Train your instincts.</h1>
+      <p class="module-intro">Three quick-fire ways to sharpen the way you think. Choose your next run.</p>
+      <div id="gameCatalog" class="game-catalog">
+        <article class="game-card">
+          <div class="game-card-top"><span class="game-index">01</span><span class="game-tag">45 SEC RUN</span></div>
+          <div class="game-symbol pattern-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <h2>Pattern Sprint</h2><p>Read the signal. Find what comes next. Beat the clock.</p>
+          <button class="game-launch" type="button" data-launch-game="pattern">START SPRINT <span>↗</span></button>
+        </article>
+        <article class="game-card">
+          <div class="game-card-top"><span class="game-index">02</span><span class="game-tag">5 PUZZLES</span></div>
+          <div class="game-symbol logic-symbol" aria-hidden="true"><span>?</span></div>
+          <h2>Logic Lab</h2><p>Crack five compact puzzles using pure reasoning.</p>
+          <button class="game-launch" type="button" data-launch-game="logic">ENTER THE LAB <span>↗</span></button>
+        </article>
+        <article class="game-card">
+          <div class="game-card-top"><span class="game-index">03</span><span class="game-tag">5 CLUES</span></div>
+          <div class="game-symbol data-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <h2>Data Detective</h2><p>Interrogate a dataset and uncover the story inside.</p>
+          <button class="game-launch" type="button" data-launch-game="data">OPEN CASE <span>↗</span></button>
+        </article>
+      </div>
+      <div id="gamePanel" class="game-panel" aria-live="polite" hidden></div>
+    </main>
+  </div>
+  <script src="games.js"></script>
+</body>
+</html>

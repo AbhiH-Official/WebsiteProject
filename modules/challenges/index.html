@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030708">
+  <title>Field Missions | Infoverse</title>
+  <link rel="stylesheet" href="../module-shell.css">
+  <link rel="stylesheet" href="challenges.css">
+</head>
+<body>
+  <div class="module-shell">
+    <div class="module-logo-half module-logo-left" aria-hidden="true"></div>
+    <div class="module-logo-half module-logo-right" aria-hidden="true"></div>
+    <header class="module-topbar">
+      <a class="module-brand" href="../../index.html?home=1#home"><img src="../../assets/infoverse.svg" alt=""><span>Infoverse</span></a>
+      <a class="module-return" href="../../index.html?home=1#home">← ALL MODULES</a>
+    </header>
+
+    <main class="module-layout challenge-layout">
+      <p class="module-eyebrow">03 / FIELD MISSIONS</p>
+      <h1>Put insight into action.</h1>
+      <p class="module-intro">Apply the analyst toolkit to realistic business situations. Open a mission brief, inspect the objective, and mark it when you are ready to tackle it.</p>
+      <section class="mission-progress" aria-label="Mission progress">
+        <div><span>MISSIONS READY</span><strong id="missionProgressText">0 / 3 briefs reviewed</strong></div>
+        <div id="missionProgress" class="mission-progress-track" role="progressbar" aria-label="Mission briefs reviewed" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><span id="missionProgressBar"></span></div>
+      </section>
+      <div class="mission-grid">
+        <details class="mission-card">
+          <summary><span class="mission-number">01</span><span class="mission-status">SCENARIO / RETAIL</span><h2>Checkout drop-off</h2><p>Online sales are steady, but fewer customers are completing checkout.</p><span class="mission-open">OPEN BRIEF <b>+</b></span></summary>
+          <div class="mission-brief"><h3>Your objective</h3><p>Identify what evidence and stakeholder conversations you need before recommending a change.</p><ul><li>Define the outcome and baseline.</li><li>Map the customer journey and locate the drop-off.</li><li>Propose a low-risk test and success measure.</li></ul><label><input type="checkbox" data-mission="retail"><span>Brief reviewed</span></label></div>
+        </details>
+        <details class="mission-card">
+          <summary><span class="mission-number">02</span><span class="mission-status">SCENARIO / OPERATIONS</span><h2>Slow service requests</h2><p>Teams handle similar requests differently, causing delays and rework.</p><span class="mission-open">OPEN BRIEF <b>+</b></span></summary>
+          <div class="mission-brief"><h3>Your objective</h3><p>Find the process constraint, align teams on a workable future state, and define how improvement will be measured.</p><ul><li>Interview people across the handoffs.</li><li>Model the current and future workflows.</li><li>Estimate value, risk, and adoption needs.</li></ul><label><input type="checkbox" data-mission="operations"><span>Brief reviewed</span></label></div>
+        </details>
+        <details class="mission-card">
+          <summary><span class="mission-number">03</span><span class="mission-status">SCENARIO / PRODUCT</span><h2>Dashboard nobody uses</h2><p>A new reporting dashboard launched, but decision-makers still rely on spreadsheets.</p><span class="mission-open">OPEN BRIEF <b>+</b></span></summary>
+          <div class="mission-brief"><h3>Your objective</h3><p>Discover the decision the dashboard should support and diagnose the gap between delivery and user needs.</p><ul><li>Identify user groups and key decisions.</li><li>Check data trust, definitions, and timing.</li><li>Define adoption and outcome measures.</li></ul><label><input type="checkbox" data-mission="product"><span>Brief reviewed</span></label></div>
+        </details>
+      </div>
+      <a class="mission-learning-link" href="../learn/index.html">Need a refresher? Open the Business Analyst roadmap <span>↗</span></a>
+    </main>
+  </div>
+  <script src="challenges.js"></script>
+</body>
+</html>
