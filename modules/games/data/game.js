@@ -1,0 +1,9 @@
+(function () {
+  const regions=["North","East","South","West","Central"];
+  function build(id,prompt,answer,explain,topic,values,offsets){const choices=[answer].concat(offsets).filter((v,i,a)=>a.indexOf(v)===i).sort(()=>Math.random()-0.5);return {id:id,prompt:prompt,choices:choices.map(String),answer:choices.indexOf(answer),explain:explain,topic:topic,table:{headers:["Region","Weekly sales"],rows:regions.map((r,i)=>[r,values[i]])}};}
+  function rows(i){return regions.map((_,j)=>12+i*2+((i+j*7)%19));}
+  const easy=Array.from({length:15},(_,i)=>{const v=rows(i),answer=Math.max(...v),idx=v.indexOf(answer);return build("e"+i,"Which region recorded the highest weekly sales?",regions[idx],regions[idx]+" is highest with "+answer+" sales. Compare the values in the table before choosing.","Read and compare",v,["North","East","South"].filter(x=>x!==regions[idx]).slice(0,3));});
+  const medium=Array.from({length:15},(_,i)=>{const v=rows(i),answer=v.reduce((a,b)=>a+b,0);return build("m"+i,"What is the total weekly sales across all five regions?",answer,"Add each region: "+v.join(" + ")+" = "+answer+".","Aggregate values",v,[answer+7,answer-5,answer+12]);});
+  const hard=Array.from({length:15},(_,i)=>{const v=rows(i),low=Math.min(...v),high=Math.max(...v),answer=Number(((high-low)/low*100).toFixed(1));return build("h"+i,"By what percentage are sales in the highest region greater than sales in the lowest region? Round to one decimal place.",answer, "Range = "+high+" − "+low+" = "+(high-low)+". Relative increase = range ÷ low × 100 = "+answer+"%.","Relative comparison",v,[Number((answer+5).toFixed(1)),Number(Math.max(0,answer-4).toFixed(1)),Number((answer+10).toFixed(1))]);});
+  window.ARCADE_GAME={number:"03",title:"Data Detective",description:"Interrogate small datasets, compare measures, and uncover the story behind the numbers.",questions:{easy:easy,medium:medium,hard:hard}};
+})();

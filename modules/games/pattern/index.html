@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030708">
+  <title>Pattern Sprint | Infoverse Arcade</title>
+  <link rel="stylesheet" href="../../module-shell.css">
+  <link rel="stylesheet" href="../game-play.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <div class="module-shell arcade-child">
+    <div class="module-logo-half module-logo-left" aria-hidden="true"></div>
+    <div class="module-logo-half module-logo-right" aria-hidden="true"></div>
+    <header class="module-topbar">
+      <a class="module-brand" href="../../../index.html?home=1#home"><img src="../../../assets/infoverse.svg" alt=""><span>Infoverse</span></a>
+      <a class="module-return" href="../index.html">← ARCADE</a>
+    </header>
+    <main class="module-layout arcade-game-layout">
+      <p class="module-eyebrow" id="gameEyebrow"></p>
+      <h1 id="arcadeGameTitle"></h1>
+      <p class="game-description" id="arcadeGameDescription"></p>
+      <section class="setup-card" id="setupPanel">
+        <h2 class="setup-title">Configure your session</h2>
+        <p class="setup-caption">Choose a preset or tune all three session settings.</p>
+        <div class="preset-grid" role="group" aria-label="Difficulty preset">
+          <button class="preset-button" type="button" data-preset="easy" aria-pressed="true"><strong>EASY</strong><span>Easy questions · 10 rounds · 60 seconds each</span></button>
+          <button class="preset-button" type="button" data-preset="medium" aria-pressed="false"><strong>MEDIUM</strong><span>Medium questions · 12 rounds · 40 seconds each</span></button>
+          <button class="preset-button" type="button" data-preset="hard" aria-pressed="false"><strong>HARD</strong><span>Hard questions · 15 rounds · 25 seconds each</span></button>
+          <button class="preset-button" type="button" data-preset="custom" aria-pressed="false"><strong>CUSTOM</strong><span>Choose difficulty, question count, and time</span></button>
+        </div>
+        <div class="custom-settings" id="customSettings" hidden>
+          <label>Question difficulty<select id="customDifficulty"><option value="easy">Low · Easy</option><option value="medium" selected>Medium</option><option value="hard">High · Hard</option></select></label>
+          <label>Questions per run<select id="customCount"><option value="low">Low · 5 questions</option><option value="medium" selected>Medium · 10 questions</option><option value="high">High · 15 questions</option></select></label>
+          <label>Time per question<select id="customTime"><option value="low">Low · 25 seconds</option><option value="medium" selected>Medium · 40 seconds</option><option value="high">High · 60 seconds</option></select></label>
+        </div>
+        <div class="settings-summary" id="settingsSummary"></div>
+        <button class="primary-action" id="startSession" type="button">START SESSION →</button>
+        <p class="scoring-note">Scoring: each question receives an equal share of 100 points (10 points in the easy 10-question run). Correct answers earn 60–100% of that share depending on speed; incorrect answers and timeouts earn 0. No question appears twice in one session.</p>
+      </section>
+      <section id="playPanel" hidden aria-live="polite"></section>
+    </main>
+  </div>
+  <script src="game.js"></script>
+  <script src="../game-runtime.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+(function () {
+  function build(id, prompt, answer, explanation, topic, offsets) { const values=[answer].concat(offsets.map(function(n){return answer+n;})); const choices=[...new Set(values)].sort(function(){return Math.random()-0.5;}); return {id:id,prompt:prompt,choices:choices,answer:choices.indexOf(answer),explain:explanation,topic:topic}; }
+  function letters(n){return String.fromCharCode(65+n);}
+  const easy=Array.from({length:15},function(_,i){const step=i%3+1,start=i%5+1,ans=start+step*4; return build("e"+i,"A code advances through letters by the same number of places: "+[0,1,2,3].map(n=>letters(start-1+step*n)).join(", ")+", ?. Which letter comes next?",letters(ans-1),"Move forward "+step+" letters each time.","Letter sequence",[1,-1,2]);});
+  const medium=Array.from({length:15},function(_,i){const total=48+i*6,count=4+(i%4),known=total-(12+i); const answer=known/count; return build("m"+i,"A team has "+count+" analysts. Their average daily output is "+answer+" cases. How many cases did the team complete in total?",total,"Total = average × number of analysts = "+answer+" × "+count+" = "+total+".","Translate and calculate",[count, -count, 2*count]);});
+  const hard=Array.from({length:15},function(_,i){const base=20+i*3,rate=10+i;const answer=base*(1+rate/100);return build("h"+i,"A service handles "+base+" requests per minute. Demand rises by "+rate+"%. What is the new rate?",Number(answer.toFixed(1)),"Increase = "+base+" × "+rate+"% = "+(base*rate/100).toFixed(1)+". New rate = "+base+" + "+(base*rate/100).toFixed(1)+" = "+answer.toFixed(1)+" requests per minute.","Percentage change",[2,-2,4].map(x=>x*(1+rate/100)));});
+  window.ARCADE_GAME={number:"02",title:"Logic Lab",description:"Use clear reasoning, careful calculations, and evidence to solve compact analytical puzzles.",questions:{easy:easy,medium:medium,hard:hard}};
+})();
+

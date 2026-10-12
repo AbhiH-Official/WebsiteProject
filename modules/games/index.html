@@ -16,34 +16,32 @@
       <a class="module-brand" href="../../index.html?home=1#home"><img src="../../assets/infoverse.svg" alt=""><span>Infoverse</span></a>
       <a class="module-return" href="../../index.html?home=1#home">← ALL MODULES</a>
     </header>
-
     <main class="module-layout games-layout">
       <p class="module-eyebrow">02 / INFOVERSE ARCADE</p>
       <h1>Train your instincts.</h1>
-      <p class="module-intro">Three quick-fire ways to sharpen the way you think. Choose your next run.</p>
-      <div id="gameCatalog" class="game-catalog">
-        <article class="game-card">
-          <div class="game-card-top"><span class="game-index">01</span><span class="game-tag">45 SEC RUN</span></div>
+      <p class="module-intro">Choose a game, set the challenge, then earn up to 100 points through accuracy and speed.</p>
+      <section class="game-catalog" aria-label="Choose a game">
+        <a class="game-card" href="pattern/index.html">
+          <div class="game-card-top"><span class="game-index">01</span><span class="game-tag">SEQUENCES</span></div>
           <div class="game-symbol pattern-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-          <h2>Pattern Sprint</h2><p>Read the signal. Find what comes next. Beat the clock.</p>
-          <button class="game-launch" type="button" data-launch-game="pattern">START SPRINT <span>↗</span></button>
-        </article>
-        <article class="game-card">
-          <div class="game-card-top"><span class="game-index">02</span><span class="game-tag">5 PUZZLES</span></div>
+          <h2>Pattern Sprint</h2><p>Spot the rule, complete the sequence, and keep your signal sharp.</p>
+          <span class="game-launch">CHOOSE YOUR RUN <b>↗</b></span>
+        </a>
+        <a class="game-card" href="logic/index.html">
+          <div class="game-card-top"><span class="game-index">02</span><span class="game-tag">DEDUCTION</span></div>
           <div class="game-symbol logic-symbol" aria-hidden="true"><span>?</span></div>
-          <h2>Logic Lab</h2><p>Crack five compact puzzles using pure reasoning.</p>
-          <button class="game-launch" type="button" data-launch-game="logic">ENTER THE LAB <span>↗</span></button>
-        </article>
-        <article class="game-card">
-          <div class="game-card-top"><span class="game-index">03</span><span class="game-tag">5 CLUES</span></div>
+          <h2>Logic Lab</h2><p>Test what follows from the evidence—and what does not.</p>
+          <span class="game-launch">ENTER THE LAB <b>↗</b></span>
+        </a>
+        <a class="game-card" href="data/index.html">
+          <div class="game-card-top"><span class="game-index">03</span><span class="game-tag">DATA CASES</span></div>
           <div class="game-symbol data-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-          <h2>Data Detective</h2><p>Interrogate a dataset and uncover the story inside.</p>
-          <button class="game-launch" type="button" data-launch-game="data">OPEN CASE <span>↗</span></button>
-        </article>
-      </div>
-      <div id="gamePanel" class="game-panel" aria-live="polite" hidden></div>
+          <h2>Data Detective</h2><p>Read a compact dataset and make the calculation that solves the case.</p>
+          <span class="game-launch">OPEN A CASE <b>↗</b></span>
+        </a>
+      </section>
+      <p class="game-catalog-note">Every run is a fresh, no-repeat question set. Difficulty changes question level, session length, and time per question.</p>
     </main>
   </div>
-  <script src="games.js"></script>
 </body>
 </html>
