@@ -8,7 +8,7 @@
   const previous = document.getElementById("previousNode");
   const next = document.getElementById("nextNode");
   const position = document.getElementById("nodePosition");
-  const key = "infoverse-course-" + course.id + "-v1";
+  const key = "infoverse-course-" + course.id + "-v2";
   let completed = new Set();
   let selected = -1;
 
@@ -16,6 +16,7 @@
   document.getElementById("courseEyebrow").textContent = course.number + " / " + course.category;
   document.getElementById("courseTitle").textContent = course.title;
   document.getElementById("courseIntro").textContent = course.intro;
+  document.querySelector(".roadmap-heading span:last-child").textContent = course.nodes.length + " LESSONS";
 
   try {
     completed = new Set(JSON.parse(localStorage.getItem(key) || "[]"));
@@ -25,7 +26,7 @@
 
   function updateProgress() {
     const count = completed.size;
-    progressText.textContent = count + " / " + course.nodes.length + " stages complete";
+    progressText.textContent = count + " / " + course.nodes.length + " lessons complete";
     progressBar.style.width = (count / course.nodes.length * 100) + "%";
     progressTrack.setAttribute("aria-valuemax", String(course.nodes.length));
     progressTrack.setAttribute("aria-valuenow", String(count));
@@ -39,10 +40,8 @@
       button.type = "button";
       button.className = "roadmap-node";
       button.setAttribute("aria-pressed", String(completed.has(String(index))));
-      if (index === selected) {
-        button.setAttribute("aria-current", "step");
-      }
-      button.setAttribute("aria-label", "Stage " + String(index + 1).padStart(2, "0") + ": " + node.title + (completed.has(String(index)) ? ", complete" : ""));
+      if (index === selected) button.setAttribute("aria-current", "step");
+      button.setAttribute("aria-label", "Lesson " + String(index + 1).padStart(2, "0") + ": " + node.title + (completed.has(String(index)) ? ", complete" : ""));
       const number = document.createElement("span");
       number.className = "node-number";
       number.textContent = String(index + 1).padStart(2, "0");
@@ -80,14 +79,18 @@
     panel.replaceChildren();
     const kicker = document.createElement("div");
     kicker.className = "lesson-kicker";
-    kicker.textContent = "STAGE " + String(index + 1).padStart(2, "0") + " / " + node.phase.toUpperCase();
+    kicker.textContent = "LESSON " + String(index + 1).padStart(2, "0") + " / " + node.phase.toUpperCase();
     const title = document.createElement("h2");
     title.className = "lesson-title";
     title.textContent = node.title;
     const lead = document.createElement("p");
     lead.className = "lesson-lead";
     lead.textContent = node.lead;
-    panel.append(kicker, title, lead, section("The concept", node.definition), section("How to use it", node.explanation));
+    panel.append(kicker, title, lead);
+
+    panel.append(section("Learning objective", node.objective));
+    panel.append(section("Core idea", node.definition));
+    panel.append(section("Learn the method", node.explanation));
 
     const flow = document.createElement("section");
     flow.className = "lesson-section";
@@ -117,7 +120,18 @@
     code.className = "lesson-example";
     code.textContent = node.example;
     example.append(exampleHeading, code);
-    panel.append(example, section("Practice", node.practice, "practice-box"));
+    panel.append(example);
+    panel.append(section("Common mistake to avoid", node.mistake, "mistake-box"));
+    panel.append(section("Your turn", node.practice, "practice-box"));
+
+    const answer = document.createElement("details");
+    answer.className = "answer-reveal";
+    const answerTitle = document.createElement("summary");
+    answerTitle.textContent = "Show a worked check";
+    const answerText = document.createElement("p");
+    answerText.textContent = node.answer;
+    answer.append(answerTitle, answerText);
+    panel.append(answer);
 
     const label = document.createElement("label");
     label.className = "complete-lesson";
@@ -132,7 +146,7 @@
       renderRoadmap();
     });
     const labelText = document.createElement("span");
-    labelText.textContent = "Mark this stage complete";
+    labelText.textContent = "I can explain and apply this lesson";
     label.append(checkbox, labelText);
     panel.append(label);
 
@@ -150,6 +164,3 @@
   updateProgress();
   renderRoadmap();
 })();
-
-
-

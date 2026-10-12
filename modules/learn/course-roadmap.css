@@ -63,3 +63,23 @@
   .complete-lesson input { width:5vw; }
 }
 @media(max-width:430px) { .course-progress>div:first-child { align-items:flex-start; flex-direction:column; gap:.6vh; } .roadmap-heading span:last-child { display:none; } }
+/* Extra teaching blocks shown inside every lesson panel. */
+.lesson-section { margin-top:1.4vh; padding:1.15vh 1vw; border:1px solid rgba(39,207,255,.13); border-radius:.45vw; background:rgba(2,9,12,.62); }
+.lesson-section h3 { margin:0 0 .7vh; color:var(--shell-green); font-size:clamp(9px,.7vw,11px); letter-spacing:.12em; text-transform:uppercase; }
+.lesson-section p { margin:0; color:#b2c9c3; font-size:clamp(11px,.84vw,14px); line-height:1.65; white-space:pre-line; }
+.lesson-section.practice-box { border-color:rgba(55,255,173,.3); background:rgba(55,255,173,.045); }
+.lesson-section.mistake-box { border-color:rgba(255,187,89,.25); background:rgba(255,187,89,.035); }
+.lesson-section.mistake-box h3 { color:#ffcb77; }
+.lesson-example { overflow:auto; margin:.6vh 0 0; padding:.9vh .8vw; border-left:2px solid var(--shell-blue); background:#020709; color:#b9fff0; font:clamp(10px,.8vw,13px)/1.65 Consolas,monospace; white-space:pre-wrap; }
+.answer-reveal { margin-top:1.2vh; border:1px solid rgba(39,207,255,.18); border-radius:.4vw; background:rgba(39,207,255,.035); color:#b2c9c3; }
+.answer-reveal summary { padding:1vh .8vw; color:var(--shell-blue); font-size:clamp(10px,.76vw,12px); letter-spacing:.06em; cursor:pointer; }
+.answer-reveal p { margin:0; padding:0 .8vw 1.2vh; color:#c5dad4; font-size:clamp(11px,.83vw,14px); line-height:1.65; white-space:pre-line; }
+.lesson-nav { position:sticky; bottom:0; z-index:3; padding:1.2vh 1vw; border:1px solid rgba(39,207,255,.15); border-radius:.5vw; background:rgba(3,9,11,.96); backdrop-filter:blur(12px); }
+@media(max-width:760px) {
+  .lesson-section { padding:1.3vh 3vw; border-radius:1vw; }
+  .lesson-example { padding:1vh 2vw; }
+  .answer-reveal { border-radius:1vw; }
+  .answer-reveal summary { padding:1.2vh 3vw; }
+  .answer-reveal p { padding:0 3vw 1.4vh; }
+  .lesson-nav { border-radius:1.5vw; }
+}
