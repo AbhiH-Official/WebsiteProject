@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030708">
+  <title>Data Visualization with Power BI | Infoverse</title>
+  <link rel="stylesheet" href="../../module-shell.css">
+  <link rel="stylesheet" href="../course-roadmap.css">
+  <link rel="stylesheet" href="../course-theme.css">
+  <link rel="stylesheet" href="course.css">
+</head>
+<body>
+  <div class="module-shell course-shell">
+    <div class="module-logo-half module-logo-left" aria-hidden="true"></div>
+    <div class="module-logo-half module-logo-right" aria-hidden="true"></div>
+    <header class="module-topbar">
+      <a class="module-brand" href="../../../index.html?home=1#home"><img src="../../../assets/infoverse.svg" alt=""><span>Infoverse</span></a>
+      <a class="module-return" href="../index.html">← COURSE SELECTOR</a>
+    </header>
+    <main class="module-layout course-layout">
+      <p class="module-eyebrow" id="courseEyebrow"></p>
+      <h1 id="courseTitle"></h1>
+      <p class="module-intro" id="courseIntro"></p>
+      <section class="course-progress">
+        <div><span>YOUR COURSE PROGRESS</span><strong id="progressText"></strong></div>
+        <div class="progress-track" role="progressbar" aria-label="Course completion" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"><span id="progressBar"></span></div>
+      </section>
+      <div class="course-workspace">
+        <section class="roadmap-panel" aria-label="Course roadmap">
+          <div class="roadmap-heading"><span>LEARNING ROADMAP</span><span>SELECT A NODE</span></div>
+          <ol class="roadmap-nodes" id="roadmapNodes"></ol>
+        </section>
+        <article class="lesson-panel" id="lessonPanel" aria-live="polite">
+          <div class="lesson-empty"><span class="lesson-signal">◈</span><p>Select the first roadmap node to open your lesson.</p><small>Each stop includes a concept, a worked example, and a short practice prompt.</small></div>
+        </article>
+      </div>
+      <nav class="lesson-nav" aria-label="Course navigation"><a id="previousNode" href="#">← PREVIOUS</a><span id="nodePosition">0 / 0</span><a id="nextNode" href="#">NEXT →</a></nav>
+    </main>
+  </div>
+  <script src="course.js"></script>
+  <script src="../course-runtime.js"></script>
+</body>
+</html>
+
+
+
+
+

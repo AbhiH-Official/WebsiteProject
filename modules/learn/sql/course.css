@@ -1,0 +1,3 @@
+.course-shell { --course-accent:#52ffc0; }
+.course-layout .module-eyebrow,.course-layout .lesson-kicker { color:var(--course-accent); }
+.course-layout .lesson-example { border-left-color:var(--course-accent); }

@@ -1,0 +1,5 @@
+.course-shell { --course-accent: #37ffad; }
+.course-shell .module-layout { border-color: color-mix(in srgb,var(--course-accent),transparent 84%); }
+.course-shell .module-eyebrow,.course-shell .lesson-kicker { color:var(--course-accent); }
+.course-shell .lesson-title { text-shadow:0 0 1.5vw color-mix(in srgb,var(--course-accent),transparent 80%); }
+.course-shell .roadmap-node[aria-current="step"] { border-color:color-mix(in srgb,var(--course-accent),transparent 55%); }
